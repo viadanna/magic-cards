@@ -1,6 +1,11 @@
 version: '2'
 
 services:
+    rabbitmq:
+      image: rabbitmq:3-management
+      ports:
+        - "5672:5672"
+        - "15672:15672"
     tcgplace-cards-db:
       image: mysql:5.7
       container_name: tcgplace_db
