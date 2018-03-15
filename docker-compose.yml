@@ -18,5 +18,9 @@ services:
       environment:
          MYSQL_ROOT_PASSWORD: root
          MYSQL_DATABASE: tcgplace
+    web:
+        build: .
+        ports:
+        - "5000:5000"
 volumes:
     data:
